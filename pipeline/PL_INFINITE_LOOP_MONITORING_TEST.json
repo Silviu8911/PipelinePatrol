@@ -33,7 +33,7 @@
 		"concurrency": 1,
 		"parameters": {
 			"t": {
-				"type": "int"
+				"type": "string"
 			}
 		},
 		"annotations": [
