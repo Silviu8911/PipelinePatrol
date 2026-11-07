@@ -1,0 +1,55 @@
+{
+	"name": "test4",
+	"properties": {
+		"activities": [
+			{
+				"name": "StepBeforeFailure",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "FailingMiddleStep",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "StepBeforeFailure",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Intentional failure in the middle of the pipeline.",
+					"errorCode": "INTENTIONAL_MIDDLE_FAILURE"
+				}
+			},
+			{
+				"name": "StepAfterFailure",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "FailingMiddleStep",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"annotations": [
+			"supply",
+			"P1"
+		],
+		"lastPublishTime": "2026-11-07T12:44:08Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

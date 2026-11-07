@@ -1,0 +1,15 @@
+{
+	"name": "PipelinePatrol",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "5f893d11-e173-4805-b152-66516f24d247",
+		"tenantId": "f149f7de-cb02-4676-9d90-1267010bdd49"
+	}
+}

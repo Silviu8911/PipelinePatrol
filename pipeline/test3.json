@@ -1,0 +1,39 @@
+{
+	"name": "test3",
+	"properties": {
+		"activities": [
+			{
+				"name": "SuccessfulStep",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "IntentionalFailureStep",
+				"type": "Fail",
+				"dependsOn": [
+					{
+						"activity": "SuccessfulStep",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Intentional failure for pipeline testing.",
+					"errorCode": "INTENTIONAL_FAILURE"
+				}
+			}
+		],
+		"annotations": [
+			"supply",
+			"P2"
+		],
+		"lastPublishTime": "2026-11-07T12:44:31Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

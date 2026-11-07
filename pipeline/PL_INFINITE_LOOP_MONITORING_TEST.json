@@ -1,0 +1,37 @@
+{
+	"name": "PL_INFINITE_LOOP_MONITORING_TEST",
+	"properties": {
+		"activities": [
+			{
+				"name": "Until_Never_Complete",
+				"type": "Until",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@equals(1, 2)",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Wait_5_Seconds",
+							"type": "Wait",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 5
+							}
+						}
+					],
+					"timeout": "0.00:00:30"
+				}
+			}
+		],
+		"concurrency": 1,
+		"annotations": [
+			"Monitoring"
+		],
+		"lastPublishTime": "2026-11-07T09:01:53Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

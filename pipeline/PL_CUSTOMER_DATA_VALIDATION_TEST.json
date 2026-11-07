@@ -1,0 +1,23 @@
+{
+	"name": "PL_CUSTOMER_DATA_VALIDATION_TEST",
+	"properties": {
+		"activities": [
+			{
+				"name": "Validate_Customer_Data",
+				"type": "Fail",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"message": "Customer data validation failed - Monitoring test",
+					"errorCode": "CUSTOMER_VALIDATION_001"
+				}
+			}
+		],
+		"annotations": [
+			"Monitoring",
+			"Customer Data Validation"
+		],
+		"lastPublishTime": "2026-11-07T08:41:42Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
