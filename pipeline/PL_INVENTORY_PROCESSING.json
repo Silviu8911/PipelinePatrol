@@ -14,7 +14,7 @@
 				"typeProperties": {
 					"variableName": "testVariable",
 					"value": {
-						"value": "@int('INVALID_NUMBER')",
+						"value": "@Strin(@int('INVALID_NUMBER'))",
 						"type": "Expression"
 					}
 				}
