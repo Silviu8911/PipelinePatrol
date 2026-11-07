@@ -1,5 +1,5 @@
 {
-	"name": "PL_INVENTORY_PROCESSING_ERROR_TEST",
+	"name": "PL_INVENTORY_PROCESSING",
 	"properties": {
 		"activities": [
 			{
@@ -26,7 +26,6 @@
 			}
 		},
 		"annotations": [
-			"Monitoring",
 			"P3",
 			"S2"
 		],
