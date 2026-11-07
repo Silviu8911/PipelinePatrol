@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Set_Invalid_Expression",
+				"name": "Set_Expression",
 				"type": "SetVariable",
 				"dependsOn": [],
 				"policy": {
@@ -14,7 +14,7 @@
 				"typeProperties": {
 					"variableName": "testVariable",
 					"value": {
-						"value": "@Strin(@int('INVALID_NUMBER'))",
+						"value": "@int('INVALID_NUMBER')",
 						"type": "Expression"
 					}
 				}
