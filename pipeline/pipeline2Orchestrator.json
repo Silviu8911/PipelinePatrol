@@ -50,7 +50,9 @@
 			}
 		},
 		"annotations": [
-			"Customer Data Validation "
+			"Customer Data Validation ",
+			"P1",
+			"S2"
 		],
 		"lastPublishTime": "2026-11-07T09:30:16Z"
 	},
