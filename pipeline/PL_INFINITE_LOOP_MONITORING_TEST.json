@@ -19,7 +19,10 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"waitTimeInSeconds": 5
+								"waitTimeInSeconds": {
+									"value": "@pipeline().parameters.t",
+									"type": "Expression"
+								}
 							}
 						}
 					],
@@ -30,7 +33,7 @@
 		"concurrency": 1,
 		"parameters": {
 			"t": {
-				"type": "string"
+				"type": "int"
 			}
 		},
 		"annotations": [
