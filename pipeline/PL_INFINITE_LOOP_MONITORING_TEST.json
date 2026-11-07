@@ -9,7 +9,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(1, 1)",
+						"value": "@equals(1, 2)",
 						"type": "Expression"
 					},
 					"activities": [
@@ -20,7 +20,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"waitTimeInSeconds": {
-									"value": "@pipeline().parameters.t",
+									"value": "@int(pipeline().parameters.t)",
 									"type": "Expression"
 								}
 							}
