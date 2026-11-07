@@ -59,7 +59,7 @@
 						"userProperties": [],
 						"typeProperties": {
 							"expression": {
-								"value": "@equals(1, 2)",
+								"value": "@equals(1, 1)",
 								"type": "Expression"
 							},
 							"activities": [
