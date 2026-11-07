@@ -16,7 +16,8 @@
 		"annotations": [
 			"Monitoring",
 			"Customer Data Validation",
-			"P1"
+			"P1",
+			"S3"
 		],
 		"lastPublishTime": "2026-11-07T08:41:42Z"
 	},
