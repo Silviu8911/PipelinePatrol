@@ -1,0 +1,57 @@
+{
+	"name": "pipeline2",
+	"properties": {
+		"description": "Prepares the batch settings for the daily orders load.",
+		"activities": [
+			{
+				"name": "Set_Batch_Size",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "batchSize",
+					"value": {
+						"value": "@string(int(pipeline().parameters.batchSize))",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Wait_For_Source",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "Set_Batch_Size",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 5
+				}
+			}
+		],
+		"parameters": {
+			"batchSize": {
+				"type": "string",
+				"defaultValue": "5OO"
+			}
+		},
+		"variables": {
+			"batchSize": {
+				"type": "String"
+			}
+		},
+		"annotations": [
+			"Orders",
+			"P1",
+			"S1"
+		]
+	}
+}
