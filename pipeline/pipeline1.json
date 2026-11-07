@@ -196,7 +196,10 @@
 				"defaultValue": "membersChecks_empty.csv"
 			}
 		},
-		"annotations": [],
+		"annotations": [
+			"P1",
+			"S1"
+		],
 		"lastPublishTime": "2026-11-07T09:07:43Z"
 	},
 	"type": "Microsoft.DataFactory/factories/pipelines"
