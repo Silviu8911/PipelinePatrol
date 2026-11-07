@@ -28,6 +28,11 @@
 			}
 		],
 		"concurrency": 1,
+		"parameters": {
+			"t": {
+				"type": "string"
+			}
+		},
 		"annotations": [
 			"Monitoring",
 			"P2",
