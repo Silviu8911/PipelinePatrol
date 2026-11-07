@@ -99,7 +99,7 @@
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/PL_INVENTORY_PROCESSING_ERROR_TEST')]",
+			"name": "[concat(parameters('factoryName'), '/PL_INVENTORY_PROCESSING')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -131,7 +131,6 @@
 					}
 				},
 				"annotations": [
-					"Monitoring",
 					"P3",
 					"S2"
 				],
